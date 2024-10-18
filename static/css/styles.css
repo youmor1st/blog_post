@@ -1,0 +1,141 @@
+/* Основные стили */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #333;
+}
+
+/* Заголовок */
+header {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 10;
+}
+
+h1 a {
+    color: #6a11cb;
+    text-decoration: none;
+    font-size: 2.5em;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: #6a11cb;
+    margin: 0 20px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #2575fc;
+}
+
+/* Контейнер */
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Заголовки */
+h2 {
+    color: #2575fc;
+    border-bottom: 2px solid #6a11cb;
+    padding-bottom: 10px;
+}
+
+/* Стили для форм */
+form {
+    margin: 20px 0;
+}
+
+textarea {
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #6a11cb;
+    resize: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background: #6a11cb;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background: #2575fc;
+    transform: scale(1.05);
+}
+
+/* Стили для списка комментариев */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: rgba(255, 255, 255, 0.9);
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для подвала */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Адаптивные стили */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
+
+    button {
+        padding: 10px 15px;
+    }
+}
+
+.profile-picture {
+    width: 100px; /* Ширина аватара */
+    height: 100px; /* Высота аватара */
+    border-radius: 50%; /* Округление для создания эффекта круга */
+    object-fit: cover; /* Сохранение пропорций изображения */
+    border: 2px solid #6a11cb; /* Цвет рамки аватара */
+}

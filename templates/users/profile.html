@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Профиль пользователя {{ profile.user.username }}</h1>
+    <p>Биография: {{ profile.bio }}</p>
+    {% if profile.profile_picture %}
+        <img src="{{ profile.profile_picture.url }}" alt="{{ profile.user.username }}'s profile picture" />
+    {% endif %}
+
+    <p>Подписчики: {{ followers_count }}</p>
+    <p>Подписки: {{ following_count }}</p>
+
+    {% if user.is_authenticated %}
+        {% if is_following %}
+            <form action="{% url 'unfollow_user' profile.user.username %}" method="POST">
+                {% csrf_token %}
+                <button type="submit">Отписаться</button>
+            </form>
+        {% else %}
+            <form action="{% url 'follow_user' profile.user.username %}" method="POST">
+                {% csrf_token %}
+                <button type="submit">Подписаться</button>
+            </form>
+        {% endif %}
+    {% else %}
+        <p>Пожалуйста, <a href="{% url 'login' %}">войдите</a>, чтобы подписаться.</p>
+    {% endif %}
+{% endblock %}
